@@ -1,0 +1,100 @@
+package random;
+
+import java.util.*;
+
+public class bai3 {
+
+    public static void main(String[] args) {
+        Random rand = new Random();
+         int songuyen = rand.nextInt(78) + 3 ;
+        if (songuyen % 2 == 0){
+            System.out.println( songuyen + " La So chan");
+        }
+        else
+                System.out.println( songuyen + "La so le " ) ;
+    }
+
+}
+
+
+package random;
+
+import java.util.Scanner;
+import java.util.*;
+
+public class bai4 {
+    public static void main(String[] args ){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhap so thuc :");
+        int n = sc.nextInt() ;
+        Random rand = new Random();
+        double randomNumber = rand.nextDouble() * 100 ;
+        System.out.println(randomNumber);
+        if (n > randomNumber ){
+            System.out.println(n + " lon hon " + randomNumber );
+        }
+        else if (n < randomNumber ){
+            System.out.println(n + " nho hon " + randomNumber );
+        }
+        else {
+            System.out.println(n + " bang " + randomNumber );
+        }
+            
+    }
+   
+}
+
+
+package random;
+import java.util.*;
+import java.util.Scanner;
+
+public class bai5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+
+        int randomNumber = rand.nextInt(10) + 1; 
+        int guess;
+        int count = 0;
+
+        do {
+            System.out.print("Nhập số từ 1 đến 10: ");
+            guess = sc.nextInt();
+            count++;
+        } while (guess != randomNumber);
+
+        System.out.println("Bạn đã đoán đúng!");
+        System.out.println("Số lần bạn nhập là: " + count);
+    }
+}
+
+
+
+package random;
+import java.util.Random;
+import java.util.Scanner;
+
+public class bai6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+
+        int randomNumber = rand.nextInt(100) + 1; 
+        int guess;
+
+        while (true) {
+            System.out.print("Nhập số bạn đoán (1-100): ");
+            guess = sc.nextInt();
+
+            if (guess == randomNumber) {
+                System.out.println("Chúc mừng! Bạn đã đoán đúng ");
+                break;
+            } else if (guess < randomNumber) {
+                System.out.println("Lớn hơn");
+            } else {
+                System.out.println("Nhỏ hơn");
+            }
+        }
+    }
+}
